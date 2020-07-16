@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fapatel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/16 12:30:33 by fapatel           #+#    #+#             */
+/*   Updated: 2020/07/16 14:54:53 by fapatel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include<stdio.h>
+#include<unistd.h>
+
+int ft_recursive_power(int nb, int power)
+{
+	int		res;
+		if (power < 0)
+			return (0);	
+		else if (power < 1)
+			return (1);
+		return  (nb * ft_recursive_power(nb, power - 1));
+}
